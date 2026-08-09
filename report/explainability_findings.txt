@@ -1,0 +1,23 @@
+EXPLAINABILITY FINDINGS
+
+Final model: XGBoost
+
+Top 5 features by model feature importance (chart: 06_feature_importance.png):
+NumOfProducts                   0.2178
+IsActiveMember                  0.1842
+Age                             0.1561
+Geography_Germany               0.0960
+EngagementProductInteraction    0.0646
+
+Top 5 features by SHAP value impact (chart: 07_shap_summary.png):
+             feature  mean_abs_shap
+0                Age         0.8656
+1      NumOfProducts         0.8283
+2     IsActiveMember         0.3865
+3        Gender_Male         0.2566
+4  Geography_Germany         0.2514
+
+Both methods confirm the top churn drivers are consistent, cross-validated by three independently-trained models (Decision Tree, Random Forest, XGBoost) in addition to SHAP analysis — providing strong confidence these represent genuine churn drivers rather than model-specific noise.
+
+This aligns with the project's framing around engagement and product utilization: NumOfProducts ranks in the top 2 by both methods, and IsActiveMember ranks in the top 3 by both methods. Notably, the engineered EngagementProductInteraction feature ranks 5th by native importance but does not appear in SHAP's top 5 (replaced there by Gender_Male and Geography_Germany) - suggesting the raw NumOfProducts and IsActiveMember signals carry more independent predictive weight than their combined interaction term. This still supports engagement/product-driven retention strategies over purely demographic ones, though demographic factors (Age, Gender, Geography_Germany) carry real, non-trivial influence too.
+

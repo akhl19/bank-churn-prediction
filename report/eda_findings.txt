@@ -1,0 +1,17 @@
+EDA FINDINGS
+
+1. Churn rate by Geography (chart: 01_churn_by_geography.png):
+Germany: 32.44%, Spain: 16.67%, France: 16.15%. Germany's churn rate is roughly double that of the other two countries.
+
+2. Churn rate by Gender (chart: 02_churn_by_gender.png):
+Female: 25.07%, Male: 16.46%. Female customers churn at roughly 1.5x the rate of male customers.
+
+3. Churn rate by NumOfProducts (chart: 03_churn_by_products.png):
+1 product: 27.71% (n=5,084), 2 products: 7.58% (n=4,590), 3 products: 82.71% (n=266), 4 products: 100.00% (n=60). 2 products is the safest position; risk climbs sharply on either side, with 3-4 product customers representing a small but extremely high-risk segment.
+
+4. Churn rate by Active Membership (chart: 04_churn_by_active.png):
+Inactive members: 26.85%, Active members: 14.27%. Inactive members churn at roughly 1.9x the rate of active members.
+
+5. Age distribution by churn status (chart: 05_age_distribution.png):
+Retained customers are concentrated around ages 30-40 (peak ~35). Churned customers show a flatter, wider distribution peaking later around ages 45-50, with meaningfully more presence in the 50-65 range - churned customers skew noticeably older than retained customers.
+
